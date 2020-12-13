@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'k13r';
+  theme:string=" Создание";
+  id = 0;
+  product = "";
+  data = 0;
+  price = 0;
+
+  links: any[] = [];
 }

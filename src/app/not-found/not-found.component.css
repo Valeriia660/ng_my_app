@@ -1,0 +1,8 @@
+.found {
+    color: rgb(0, 140, 255);
+    text-decoration: none;
+}
+
+.found:active {
+    color: rgb(0, 108, 180);
+}

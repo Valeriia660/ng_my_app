@@ -1,0 +1,63 @@
+.nav {
+    clear: both;
+}
+
+.a1 {
+    color: lightgreen;
+    text-decoration: none;
+    padding: 4px;
+    border: 2px outset slateblue;
+}
+
+.a2 {
+    color: coral;
+    text-decoration: none;
+    padding: 4px;
+    border: 2px outset lightgreen;
+}
+
+.a1:active {
+    color: rgb(98, 160, 98);
+    text-decoration: none;
+    padding: 4px;
+    border: 2px outset rgb(72, 62, 136);
+}
+
+.a2:active {
+    color: rgb(172, 86, 55);
+    text-decoration: none;
+    padding: 4px;
+    border: 2px outset rgb(98, 160, 98);
+}
+
+.a22 {
+    color: slateblue;
+    text-decoration: none;
+    padding: 4px;
+    border: 2px outset turquoise;
+}
+
+.a22:active {
+    color: rgb(72, 62, 136);
+    text-decoration: none;
+    padding: 4px;
+    border: 2px outset rgb(48, 165, 153);
+}
+
+.a3 {
+    color: turquoise;
+    text-decoration: none;
+    padding: 4px;
+    border: 2px outset coral;
+}
+
+.a3:active {
+    color: rgb(48, 165, 153);
+    text-decoration: none;
+    padding: 4px;
+    border: 2px outset rgb(172, 86, 55);
+}
+
+.active {
+    text-decoration: underline;
+}
