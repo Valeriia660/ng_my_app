@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -6,12 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'k13r';
-  theme:string=" Создание";
-  id = 0;
-  product = "";
-  data = 0;
-  price = 0;
+  name2: string = "Создание интерактивного сайта астромагазина";
+
+  id: number = 0;
+  product: string = "";
+  data: number = 0;
+  price: number= 0;
+
+  
 
   links: any[] = [];
+
+
 }

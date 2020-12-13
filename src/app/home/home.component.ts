@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component,OnInit, Input, Output, EventEmitter  } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +6,10 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  @Input() userTheme: string = " Создание";
- //@Output() userThemeChange = new EventEmitter<string>();
+  @Input() userName:string = "";
+ @Output() userNameChange = new EventEmitter<string>();
+ onNameChange(model: string){
+   this.userName = model;
+   this.userNameChange.emit(model);
+ }
 }

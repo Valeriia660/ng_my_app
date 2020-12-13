@@ -8,6 +8,7 @@ import { ModelsComponent } from './models/models.component';
 import { FillmodelComponent } from './fillmodel/fillmodel.component';
 import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,11 +17,13 @@ import { NotFoundComponent } from './not-found/not-found.component';
     ModelsComponent,
     FillmodelComponent,
     AboutComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

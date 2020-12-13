@@ -14,20 +14,19 @@ export class FillmodelComponent {
     data: 0,
     price: 0,
   };
-  
+
   constructor(private router: Router) {
 
   }
 
   links: any[] = [];
   
-  addLink(fillmodel: any) {
+  addLink(models: any) {
     this.links.push({
-      "id": fillmodel.id,
-      "product": fillmodel.product,
-      "data": fillmodel.data,
-      "price": fillmodel.price
+      "id": models.id,
+      "product": models.product,
+      "data": models.data,
+      "price": models.price
     })
-
   }
 }

@@ -1,20 +1,18 @@
 <div class="nav">
   <nav>
       <a routerLink=""routerLinkActive="active"class="a1"[routerLinkActiveOptions]="{exact:true}">Главная</a>
-      <a [routerLink]="['models', '1']"routerLinkActive="active" [queryParams]="{'produkt': 'car', 'price':7000}">Model 1</a>
       <a routerLink="/fillmodel"routerLinkActive="active"class="a2">Заполнить модель</a>
+
       <h3 routerLinkActive="active" *ngFor="let link of links">
-        <a [routerLink]="['models', link.id]" [queryParams]="{'product':link.product, 'data':link.data, 'price':link.price}">
-        На {{link.id}} модель
-      </a>
+        <a [routerLink]="['models', link.id]" 
+        [queryParams]="{'product':link.product, 'data':link.data, 'price':link.price}">
+        На {{link.id}} модель</a>
       </h3>
+
       <a routerLink="/about"routerLinkActive="active"class="a3">О cайте</a>
   </nav>
 </div>
 
-<h3>Выбранное имя: {{theme}}</h3>
-<br>
-<app-home [userTheme]="theme"></app-home>
-<input type="text" [(ngModel)]="theme" placeholder="Тема"/>
-<br>
+<app-home [(userName)]="name2" ></app-home>
+<h3>Выбранная тема: {{name2}}</h3>
 <router-outlet></router-outlet>

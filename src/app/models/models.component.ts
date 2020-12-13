@@ -13,13 +13,12 @@ export class ModelsComponent {
   product: string = "";
   data: number = 0;
   price: number= 0;
-  routeSub: Subscription;
-  querySub: Subscription;
+  private routeSub: Subscription;
+  private querySub: Subscription;
   constructor(private activatedRoute: ActivatedRoute) {
     this.routeSub = this.activatedRoute. params.subscribe(params => {
       this.id = params["id"]
     });
-
     this.querySub = this.activatedRoute.queryParams.subscribe(qparams => {
       this.product = qparams["product"]
       this.data = qparams["data"]
