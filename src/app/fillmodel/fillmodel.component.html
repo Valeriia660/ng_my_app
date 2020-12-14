@@ -1,9 +1,9 @@
 <br>
 <div>
   <h3>Параметры объекта:</h3>
-  Модель: <input [(ngModel)]="models.id" type="number" required placeholder="Номер"><br>
-  Название: <input [(ngModel)]="models.product" required placeholder="Название"><br>
-  Дата выпуска: <input [(ngModel)]="models.data" type="numder" required placeholder="Дата"><br>
-  Цена: <input [(ngModel)]="models.price" type="number" placeholder="Цена"><br>
-  <button (click)="addLink(models)">Добавить</button>
+  Модель: <input name="id" [(ngModel)]="model.id" type="number" required placeholder="Номер"><br>
+  Название: <input name="name" [(ngModel)]="model.name" type="text" required placeholder="Название"><br>
+  Дата выпуска: <input name="datetime" [(ngModel)]="model.datetime" type="datetime" required placeholder="Дата"><br>
+  Цена: <input name="price" [(ngModel)]="model.price" type="number" placeholder="Цена"><br>
+  <button (click)="addModel()">Добавить</button>
 </div>

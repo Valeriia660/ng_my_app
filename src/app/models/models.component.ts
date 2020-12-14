@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 
@@ -8,21 +8,17 @@ import { Subscription } from 'rxjs';
   templateUrl: './models.component.html',
   styleUrls: ['./models.component.css']
 })
-export class ModelsComponent {
-  id: number = 0;
-  product: string = "";
-  data: number = 0;
-  price: number= 0;
-  private routeSub: Subscription;
-  private querySub: Subscription;
-  constructor(private activatedRoute: ActivatedRoute) {
-    this.routeSub = this.activatedRoute. params.subscribe(params => {
-      this.id = params["id"]
-    });
-    this.querySub = this.activatedRoute.queryParams.subscribe(qparams => {
-      this.product = qparams["product"]
-      this.data = qparams["data"]
-      this.price = qparams["price"]
-    });
-  } 
+export class ModelsComponent implements OnInit {
+  model: any;
+  Sub: Subscription;
+  constructor(private route: ActivatedRoute) { 
+    this.Sub = this.route.params.subscribe(params => {
+      if (params["id"] !== undefined) {
+        this.model = localStorage.getItem(params["id"]);
+      }
+    })
+  }
+  ngOnInit(): void {
+    
+  }
 }

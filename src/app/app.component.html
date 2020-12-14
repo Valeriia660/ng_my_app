@@ -2,13 +2,7 @@
   <nav>
       <a routerLink=""routerLinkActive="active"class="a1"[routerLinkActiveOptions]="{exact:true}">Главная</a>
       <a routerLink="/fillmodel"routerLinkActive="active"class="a2">Заполнить модель</a>
-
-      <h3 routerLinkActive="active" *ngFor="let link of links">
-        <a [routerLink]="['models', link.id]" 
-        [queryParams]="{'product':link.product, 'data':link.data, 'price':link.price}">
-        На {{link.id}} модель</a>
-      </h3>
-
+        <a [routerLink]='["models", model]' *ngFor="let model of models" class="a22">Модель {{model}}</a>
       <a routerLink="/about"routerLinkActive="active"class="a3">О cайте</a>
   </nav>
 </div>

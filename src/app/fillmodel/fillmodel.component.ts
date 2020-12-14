@@ -1,32 +1,32 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import {  Router } from '@angular/router';
 
 @Component({
   selector: 'app-fillmodel',
   templateUrl: './fillmodel.component.html',
   styleUrls: ['./fillmodel.component.css']
 })
-export class FillmodelComponent {
-  models = {
+export class FillmodelComponent implements OnInit {
+  model = {
     id: 0,
-    product: "defauld",
-    data: 0,
+    name: "defauld",
+    datetime: 0,
     price: 0,
   };
 
-  constructor(private router: Router) {
+constructor(private router: Router) { }
 
-  }
+ngOnInit(): void {
+}
 
-  links: any[] = [];
-  
-  addLink(models: any) {
-    this.links.push({
-      "id": models.id,
-      "product": models.product,
-      "data": models.data,
-      "price": models.price
-    })
-  }
+addModel() {
+  this.router.navigate(["/"], {
+    queryParams: {
+      "id": this.model.id,
+      "name": this.model.name,
+      "datetime": this.model.datetime,
+      "price": this.model.price,
+    }
+  })
+}
 }
